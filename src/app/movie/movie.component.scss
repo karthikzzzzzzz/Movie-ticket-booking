@@ -1,0 +1,26 @@
+/* Remove all margins, padding, and ensure full width and height */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden; /* Disable both horizontal and vertical scrolling */
+    box-sizing: border-box;
+}
+
+.container {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100lvw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    width: auto;  /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    background-size: cover;/* Ensure image covers the entire container without distortion */
+    display: block;
+}

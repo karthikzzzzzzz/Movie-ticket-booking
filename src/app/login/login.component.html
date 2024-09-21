@@ -1,0 +1,37 @@
+<div class="login-container" >
+    <div class="left-section">
+      <div class="slogan">
+        <h1>Bookmyfilm</h1>
+        <p>Experience cinema like never before with Bookmyfilm. We offer a seamless booking experience, competitive pricing, and the latest updates on upcoming releases. Our commitment to customer satisfaction means you can enjoy your favorite films without any hassle. 
+        Plus, our loyalty program rewards you with discounts on future bookings!</p>
+      </div>
+    
+    </div>
+  
+    <div class="right-section">
+      <div class="login-box">
+        <h2>Welcome Back</h2>
+        <form (ngSubmit)="login()"> <!-- Submit form by calling login() -->
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" [(ngModel)]="email" name="email" class="form-control" placeholder="Enter your email" required>
+          </div>
+  
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" [(ngModel)]="username" name="username" class="form-control" placeholder="Enter your username" required>
+          </div>
+  
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" [(ngModel)]="password" name="password" class="form-control" placeholder="Enter your password" required>
+          </div>
+  
+          <div *ngIf="errorMsg" class="error-message">{{ errorMsg }}</div>
+  
+          <button type="submit" class="btn btn-primary">Login in</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  
