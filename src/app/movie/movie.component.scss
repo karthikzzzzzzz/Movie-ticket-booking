@@ -1,26 +1,59 @@
-/* Remove all margins, padding, and ensure full width and height */
-html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
-    overflow: hidden; /* Disable both horizontal and vertical scrolling */
-    box-sizing: border-box;
-}
-
-.container {
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    width: 100lvw;
-    display: flex;
+/* Basic styles for seat container */
+.seat-container {
+    display: grid;
+    grid-template-columns: repeat(25, 40px);
+    grid-gap: 10px;
     justify-content: center;
-    align-items: center;
-}
-
-img {
-    width: auto;  /* Full viewport width */
-    height: 100vh; /* Full viewport height */
-    background-size: cover;/* Ensure image covers the entire container without distortion */
-    display: block;
-}
+    margin-bottom: 20px;
+  }
+  
+  /* Base seat styling */
+  .seat {
+    width: 40px;
+    height: 40px;
+    background-color: #e0e0e0;
+    border: 1px solid #bcbcbc;
+    border-radius: 6px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Styling for different seat states */
+  .seat.available {
+    background-color: #ffffff;
+    border: 2px solid #4CAF50;
+  }
+  
+  .seat.selected {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .seat.sold {
+    background-color: #D3D3D3;
+    border: 2px solid #A9A9A9;
+    cursor: not-allowed;
+  }
+  
+  /* Styling for hover effect */
+  .seat:hover {
+    background-color: #F0F0F0;
+  }
+  
+  .screen {
+    height: 50px;
+    background-color: #666;
+    width: 80%;
+    margin: 20px auto;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
