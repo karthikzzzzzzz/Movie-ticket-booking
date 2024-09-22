@@ -3,6 +3,10 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.7.
 
 Demo-https://movieticketingbooking.netlify.app/movie/Trending/19
+
+
+
+
 email-abc@gmail.com
 username-karthik
 password-1234
