@@ -56,4 +56,73 @@
     padding: 10px;
     border-radius: 5px;
   }
+  /* Styling for the ticket selection section */
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: silver;
+  border-top: 2px solid #e0e0e0;
+  border-radius: 5px;
+}
+
+.footer label {
+  font-size: 16px;
+  font-weight: bold;
+  margin-right: 10px;
   
+}
+
+.footer select {
+  width: 60px;
+  height: 30px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 2px 5px;
+  background-color: antiquewhite;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.footer select:hover {
+  border-color: #4CAF50;
+}
+
+.footer select:focus {
+  outline: none;
+  border-color: #4CAF50;
+  box-shadow: 0 0 4px rgba(76, 175, 80, 0.4);
+}
+
+h3 {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #333;
+  font-weight: bold;
+  position: relative;
+  padding-bottom: 10px;
+}
+h4 {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #333;
+  font-weight: bold;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+h4::after {
+  content: "";
+  display: block;
+  width: 50%; 
+  height: 2px;
+  background-color: #4CAF50;
+  margin: 0 auto;
+  margin-top: 5px;
+}
+

@@ -21,48 +21,57 @@ export class MovieComponent {
   eliteSeats: any[] = [];
   selectedSeats: any[] = [];
   totalPrice: number = 0;
+  ticketCount: number = 1; // Default ticket count
 
   constructor() {
     this.generateAllSeats(); 
   }
 
- 
   generateSeatRow(type: string, rows: number, price: number): any[] {
     let seats = [];
-    for (let i = 1; i <= rows; i++) {
+    let seatNumber = 1; 
+    for (let i = 0; i < rows; i++) {
       for (let j = 1; j <= this.seatsPerRow; j++) {
         seats.push({
-          number: `${type}${i}`,
+          number: `${type}${seatNumber}`,
           selected: false,
           price: price
         });
+        seatNumber++; 
       }
     }
     return seats;
   }
 
-  
   generateAllSeats() {
-    this.premiumSeats = this.generateSeatRow('P', this.premiumRows, 170); // Premium
-    this.superPremiumSeats = this.generateSeatRow('SP', this.superPremiumRows, 195); // Super Premium
-    this.eliteSeats = this.generateSeatRow('E', this.eliteRows, 130); // Elite
+    this.premiumSeats = this.generateSeatRow('P', this.premiumRows, 170);
+    this.superPremiumSeats = this.generateSeatRow('SP', this.superPremiumRows, 195);
+    this.eliteSeats = this.generateSeatRow('E', this.eliteRows, 130);
   }
 
- 
   toggleSeat(seat: any) {
-    seat.selected = !seat.selected;
-
-    if (seat.selected) {
+    if (!seat.selected && this.selectedSeats.length < this.ticketCount) {
+      seat.selected = true;
       this.selectedSeats.push(seat);
-    } else {
+    } else if (seat.selected) {
+      seat.selected = false;
       this.selectedSeats = this.selectedSeats.filter(s => s.number !== seat.number);
     }
 
-    this.calculateTotalPrice(); // 
+    this.calculateTotalPrice();
   }
-
 
   calculateTotalPrice() {
     this.totalPrice = this.selectedSeats.reduce((total, seat) => total + seat.price, 0);
+  }
+
+  handleTicketCountChange() {
+    while (this.selectedSeats.length > this.ticketCount) {
+      const removedSeat = this.selectedSeats.pop();
+      if (removedSeat) {
+        removedSeat.selected = false;
+      }
+    }
+    this.calculateTotalPrice();
   }
 }

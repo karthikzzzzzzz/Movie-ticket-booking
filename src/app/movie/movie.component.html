@@ -1,32 +1,35 @@
-<app-header>
-
-</app-header>
+<app-header></app-header>
 <div class="container">
 
-    <div class="screen">SCREEN</div>
-    
+  <div class="screen">SCREEN</div>
 
-    <h4>Elite - Rs.170</h4>
-    <div class="seat-container">
-      <div *ngFor="let seat of premiumSeats" class="seat available" [class.selected]="seat.selected" [class.sold]="seat.sold" (click)="toggleSeat(seat)">
-        {{ seat.number }}
-      </div>
-    </div>
-  
-  
-    <h4>Premium - Rs.195</h4>
-    <div class="seat-container">
-      <div *ngFor="let seat of superPremiumSeats" class="seat available" [class.selected]="seat.selected" [class.sold]="seat.sold" (click)="toggleSeat(seat)">
-        {{ seat.number }}
-      </div>
-    </div>
-  
- 
-    <h4>Super-Premium - Rs.230</h4>
-    <div class="seat-container">
-      <div *ngFor="let seat of eliteSeats" class="seat available" [class.selected]="seat.selected" [class.sold]="seat.sold" (click)="toggleSeat(seat)">
-        {{ seat.number }}
-      </div>
+  <h4>Elite - Rs.130</h4>
+  <div class="seat-container">
+    <div *ngFor="let seat of eliteSeats" class="seat available" [class.selected]="seat.selected" (click)="toggleSeat(seat)">
+      {{ seat.number }}
     </div>
   </div>
-  
+
+  <h4>Premium - Rs.170</h4>
+  <div class="seat-container">
+    <div *ngFor="let seat of premiumSeats" class="seat available" [class.selected]="seat.selected" (click)="toggleSeat(seat)">
+      {{ seat.number }}
+    </div>
+  </div>
+
+  <h4>Super-Premium - Rs.195</h4>
+  <div class="seat-container">
+    <div *ngFor="let seat of superPremiumSeats" class="seat available" [class.selected]="seat.selected" (click)="toggleSeat(seat)">
+      {{ seat.number }}
+    </div>
+  </div>
+
+  <div class="footer">
+    <label for="ticketCount">Number of Tickets:</label>
+    <select id="ticketCount" [(ngModel)]="ticketCount" (change)="handleTicketCountChange()">
+      <option *ngFor="let count of [1, 2, 3, 4, 5,6,7,8,9,10]" [value]="count">{{ count }}</option>
+    </select>
+  </div>
+
+  <h3>Total Price: Rs. {{ totalPrice }}</h3>
+</div>
