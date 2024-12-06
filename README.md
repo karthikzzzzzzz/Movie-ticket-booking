@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Demo-https://movieticketingbooking.netlify.app/
 
-For the demo the login credentails are listed in the requirements.txt
+## For the demo the login credentails are listed in the login.txt
 
 
 ## Development server
