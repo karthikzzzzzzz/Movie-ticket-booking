@@ -4,12 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Demo-https://movieticketingbooking.netlify.app/
 
-
-
-
-email-abc@gmail.com
-username-karthik
-password-1234
+For the demo the login credentails are listed in the requirements.txt
 
 
 ## Development server
