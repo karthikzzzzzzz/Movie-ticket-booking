@@ -1,6 +1,8 @@
 # Project2
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.7.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.7. 
+
+This project is a simple implementation of the Movie booking site, built entirely with Angular. It focuses solely on the front-end UI, providing an interactive and responsive design.
 
 Demo-https://movieticketingbooking.netlify.app/
 
