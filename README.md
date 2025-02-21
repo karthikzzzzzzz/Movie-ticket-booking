@@ -4,6 +4,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 This project is a simple implementation of the Movie booking site, built entirely with Angular. It focuses solely on the front-end UI, providing an interactive and responsive design.
 
+<img width="1438" alt="Screenshot 2025-02-21 at 7 32 20 PM" src="https://github.com/user-attachments/assets/53389caf-7d4b-4f92-bf30-a241b096f362" />
+
+
 Demo-https://movieticketingbooking.netlify.app/
 
 ## For the demo the login credentails are listed in the login.txt
